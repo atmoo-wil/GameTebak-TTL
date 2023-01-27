@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Tanggal</title>
+	</head>
+	<body bgcolor="sky blue">
+	<script type="text/javascript">
+		var tanggal =0;
+		function passvalue() {
+		localStorage.setItem("textvalue2", tanggal);
+		return false;}
+	</script>
+
+	<script type="text/javascript">
+	var nama =localStorage.getItem("textvalue1");</script>
+	<script type="text/javascript">
+		alert ("Tebak Tanggal lahir");
+		var p1 = confirm ("Apakah tanggal lahirmu ada? \n1   3   5   7   9   11   13   15   17   19   21   23   25   27   29   31");
+		var p2 = confirm ("Kalo angka ini ada? \n2   3   6   7   10   11   14   15   18   19   22   23   26   27   30   31");
+		var p3 = confirm ("Bagaimana kalo ini? \n4   5   6   7   12   13   14   15   20   21   22   23   28   29   30   31");
+		var p4 = confirm ("Apakah tanggal lahirmu ada? \n8   9   10   11   12   13   14   15   24   25   26   27   28   29   30   31");
+		var p5 = confirm ("Jika angka ini, apakah tanggal lahirmu ada? \n16   17   18   19   20   21   22   23   24   25   26   27   28   29   30   31");
+		if (p1 ==true) {p1=1;}
+		else{p1=0;}
+		if (p2 ==true) {p2=2;}
+		else{p2=0;}
+		if (p3 ==true) {p3=4;}
+		else{p3=0;}
+		if (p4 ==true) {p4=8;}
+		else{p4=0;}
+		if (p5 ==true) {p5=16;}
+		else{p5=0;}
+		var tanggal = p1+p2+p3+p4+p5
+		if (tanggal == 0) {
+			alert("Kamu mau main-main ya ");
+			alert("wkwkwkwk");
+			alert("Makksudku, kamu mau menguji kesempurnaan programku ya");
+			alert("Terimakasih \nsilahkan mulai lagi dengan menekan f5 atau refresh"); window.stop();}
+		if (tanggal > 0)
+			{alert("Hmm bentar saya pikir dulu");
+			alert("Kamu lahir pada tanggal " + tanggal +"\n ya kan? " + nama);}
+	</script>
+
+	<br/><form action="4_bulan.html"
+	method="get"
+	onReset="return Resetsemua();" />
+	<center>
+	<font face="cursive" color="black" size="+2">
+		<script type="text/javascript">
+		document.write("<br />" + "<br />" + "<br />" + "Tebak Bulan Lahir " + "<br />");</script>
+	</font>
+	<br>
+	<input type="submit" size="+1"
+	value="Next" onclick="passvalue()" /></center>
+	</body>
+</html>
