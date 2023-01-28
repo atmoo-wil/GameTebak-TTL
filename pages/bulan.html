@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bulan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="../assests/logo.png" />
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+
+  <body bgcolor="sky blue">
+    <script type="text/javascript">
+      var bulan = 0;
+	  var Namabulan = 0;
+      function passvalue() {
+        localStorage.setItem("bulan", bulan);
+        return false;
+      }
+    </script>
+    <script type="text/javascript">
+      var nama = localStorage.getItem("nama");
+      var tanggal = localStorage.getItem("tanggal");
+    </script>
+
+    <script type="text/javascript">
+      alert("Tebak Bulan lahir");
+      alert("Mari kita mulai lagi gamenya");
+      alert("Inget Fokus yaa");
+      var q1 = confirm(
+        "Apakah bulan lahirmu ada? \nJanuari   Maret   Mei   Juli   September   November"
+      );
+      var q2 = confirm(
+        "Jika ini, apakah bulan lahirmu ada? \nFebruari   Maret   Juni   Juli   Oktober   November"
+      );
+      var q3 = confirm(
+        "Jika ini, apakah bulan lahirmu ada? \nApril   Mei   Juni   Juli   Desember"
+      );
+      var q4 = confirm(
+        "Jika ini, apakah bulan lahirmu ada? \nAgustus   September   Oktober   November   Desember"
+      );
+      if (q1 == true) {
+        q1 = 1;
+      } else {
+        q1 = 0;
+      }
+      if (q2 == true) {
+        q2 = 2;
+      } else {
+        q2 = 0;
+      }
+      if (q3 == true) {
+        q3 = 4;
+      } else {
+        q3 = 0;
+      }
+      if (q4 == true) {
+        q4 = 8;
+      } else {
+        q4 = 0;
+      }
+      var bulan = q1 + q2 + q3 + q4;
+      if (bulan == 0 || bulan > 12) {
+        alert("Hayo mau ngapain?");
+        alert("Iseng ya?");
+        alert("Kamu mau menguji kesempurnaan program saya ya?");
+        alert(
+          "Terimakasih \nsilahkan mulai lagi dengan menekan f5 atau refresh"
+        );
+        window.stop();
+      }
+      if (bulan == 2 && tanggal > 29) {
+        alert("Angka yang kamu maksud tidak ada dalam kalender");
+        alert("Ayo coba lagi dengan menekan f5 atau refresh");
+        window.stop();
+      }
+      if (
+        bulan == 4 ||
+        bulan == 6 ||
+        bulan == 9 ||
+        (bulan == 11 && tanggal > 30)
+      ) {
+        alert("Angka yang kamu maksud tidak ada dalam kalender");
+        alert("Ayo coba lagi dengan menekan f5 atau refresh");
+        window.stop();
+      } else if (bulan == 1) {
+        alert("Maka berarti " + nama + "\nlahir di bulan Januari");
+      } else if (bulan == 2 && tanggal < 30) {
+        alert("Maka berarti " + nama + "\nlahir di bulan Februari");
+      } else if (bulan == 3) {
+        alert("Maka berarti " + nama + "\nlahir di bulan Maret");
+      } else if (bulan == 4 && tanggal < 31) {
+        alert("Maka berarti " + nama + "\nlahir di bulan April");
+      } else if (bulan == 5) {
+        alert("Maka berarti " + nama + "\nlahir di bulan Mei");
+      } else if (bulan == 6 && tanggal < 31) {
+        alert("Maka berarti " + nama + "\nlahir di bulan Juni");
+      } else if (bulan == 7) {
+        alert("Maka berarti " + nama + "\nlahir di bulan Juli");
+      } else if (bulan == 8) {
+        alert("Maka berarti " + nama + "\nlahir di bulan Agustus");
+      } else if (bulan == 9 && tanggal < 31) {
+        alert("Maka berarti " + nama + "\nlahir di bulan September");
+      } else if (bulan == 10) {
+        alert("Maka berarti " + nama + "\nlahir di bulan Oktober");
+      } else if (bulan == 11 && tanggal < 31) {
+        alert("Maka berarti " + nama + "\nlahir di bulan November");
+      } else if (bulan == 12) {
+        alert("Maka berarti " + nama + "\nlahir di bulan Desember");
+      }
+	  if (bulan == 1) {
+            Namabulan = "Januari";
+          }
+          if (bulan == 2) {
+            Namabulan = "Februari";
+          }
+          if (bulan == 3) {
+            Namabulan = "Maret";
+          }
+          if (bulan == 4) {
+            Namabulan = "April";
+          }
+          if (bulan == 5) {
+            Namabulan = "Mei";
+          }
+          if (bulan == 6) {
+            Namabulan = "Juni";
+          }
+          if (bulan == 7) {
+            Namabulan = "Juli";
+          }
+          if (bulan == 8) {
+            Namabulan = "Agustus";
+          }
+          if (bulan == 9) {
+            Namabulan = "September";
+          }
+          if (bulan == 10) {
+            Namabulan = "Oktober";
+          }
+          if (bulan == 11) {
+            Namabulan = "November";
+          }
+          if (bulan == 12) {
+            Namabulan = "Desember";
+          }
+    </script>
+
+			<!-- navbar -->
+			<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+				<div class="container">
+				  <a class="navbar-brand fw-bold" href="#">Nge-Date</a>
+			<div class="navbar-nav">
+					  <a class="nav-link active fw-bold" href="#" id="pemain">
+				<script type="text/javascript">
+				  document.write(nama);
+				</script>
+			  </a>
+					</div>
+			  </nav>
+			<!-- akhir navbar -->
+	
+		<!-- container hasil -->
+		<div class="container hasil-tgl bg-light text-center">
+		  <h3 class="text-center pt-5">Bulan Lahir</h3>
+		  <h1 class="text-center"><script type="text/javascript">
+			document.write(Namabulan);
+		  </script></h1>
+				<form action="./tahun.html">
+					<button class="btn btn-primary mt-2"
+					type="submit" onclick="passvalue()"
+					>Berikutnya</button>
+					</form>
+		<!-- akhir container hasil -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

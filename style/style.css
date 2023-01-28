@@ -7,3 +7,15 @@ section {
     margin: auto;
 }
 
+.hasil-tgl{
+  width: 2000px;
+  height: auto;
+  background-color: aliceblue;
+  margin: 80px 20px 50px;
+}
+
+.kembali{
+  margin: 40px 40px 0 0 ;
+  text-align: end;
+}
+
