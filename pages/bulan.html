@@ -78,9 +78,9 @@
         window.stop();
       }
       if (
-        bulan == 4 ||
-        bulan == 6 ||
-        bulan == 9 ||
+        (bulan == 4 && tanggal > 30) ||
+        (bulan == 6 && tanggal > 30) ||
+        (bulan == 9 && tanggal > 30) ||
         (bulan == 11 && tanggal > 30)
       ) {
         alert("Angka yang kamu maksud tidak ada dalam kalender");
